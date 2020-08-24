@@ -20,7 +20,9 @@ public class Alisveris {
     List<Integer> sepet = new ArrayList<>();
     double toplamTutar =0;
     boolean uyeGirisi = false;
+
     public static void main(String[] args) {
+        System.out.println("feature");
 
     }
     public static void menu1(){
