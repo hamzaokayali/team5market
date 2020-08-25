@@ -210,6 +210,7 @@ uyeGirisi();
         //"ürününüz sepete eklenmiştir" yazıp
         //giyimGoster() methoduna geri gönderecek
 
+        
     }
 
 }
