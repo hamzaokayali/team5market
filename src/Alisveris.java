@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 //üye girişi için Kullanıcı adı "Team5" şifre "Team5"
 //üye girişi için Kullanıcı adı "Ahmet" şifre "Ahmet"
@@ -131,7 +132,7 @@ public class Alisveris {
     }
     public static void cikis(){
         //sepet kontrolu yapılarak boş ise programdan çıkış yapılır dolu ise kasaya yönlendirilir.
-
+        System.out.println("hei");
     }
 
 }
