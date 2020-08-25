@@ -28,14 +28,14 @@ import java.util.Scanner;
 public class Alisveris {
     List<Integer> sepet = new ArrayList<>();
     double toplamTutar =0;
-    static boolean uyeGirisi = false;
+    boolean uyeGirisi = false;
     Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("feature");
 
-uyeGirisi();
 
+        menu1();
 
     }
     public static void menu1(){  // Bilal ÇAKAR
@@ -43,7 +43,7 @@ uyeGirisi();
         // not olarak "üye girişi ile yapılan alışverişlerde kasada %10 indirim uygulanacaktır.
         //1 üye girişi uyeGirisi();
         //2 üye girişi yapmadan menu2()
-        System.out.println("menu1");
+
 
     }
     public static void uyeGirisi(){  //Bayram ERDOĞAN
@@ -51,28 +51,8 @@ uyeGirisi();
         // uyeGirisi variablesi değeri "true" olarak güncellenecek
         // menu2() yönlendirilecek
         //Hatalı giriş için tekrar menu1() yönlendirilecek
-//kullanıcı adı ardından şifre istenecek
-        Scanner scan = new Scanner (System.in);
-        System.out.println("Lutfen kullanici adinizi giriniz");
-        String name =scan.nextLine();
-        System.out.println("Lutfen kullanici sifrenizi giriniz");
-        String pin =scan.next();
-        //doğruluğu kontrol edilerek doğru giriş yapılır ise
-        if (name.equals("Team5")&&pin.equals("Team5")||name.equals("Ahmet")&&pin.equals("Ahmet")){
-            uyeGirisi=true;// uyeGirisi variablesi değeri "true" olarak güncellenecek
-            System.out.println("Hosgeldiniz..."+name);
-            try {
-                Thread.sleep(4);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        System.out.println("eeeeee");
 
-            menu2();// menu2() yönlendirilecek
-
-        }else {
-            System.out.println("Hatali giris yaptiniz. Lutfen tekrar deneyiniz.");
-            menu1();//Hatalı giriş için tekrar menu1() yönlendirilecek
-        }
     }
     public static void menu2(){   //Ertuğrul TOKGÖZ
         //Alışveriş yapmak istediği market bölümüne yönlendirebilmek için
@@ -81,7 +61,6 @@ uyeGirisi();
         // 2 giyimGoster()
         // 3 sarkuteriGoster()
         // 4 cıkıs()
-        System.out.println("Menu2");
 
     }
     public static void manavGoster(){   //Fethullah KAYA
@@ -171,6 +150,10 @@ uyeGirisi();
     public static void cikis(){
         //sepet kontrolu yapılarak boş ise programdan çıkış yapılır dolu ise kasaya yönlendirilir.
 
+
+
+
+
     }
     public static void icecekGoster() {   //Ramazan GÜNERİ
         //İçecek ürünlerini fiyatları ile birlikte gösteren bir menü oluşturulacak
@@ -209,6 +192,7 @@ uyeGirisi();
         //seçim kodu sepet list ine eklenecek
         //"ürününüz sepete eklenmiştir" yazıp
         //giyimGoster() methoduna geri gönderecek
+
 
     }
 
