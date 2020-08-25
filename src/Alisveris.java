@@ -26,10 +26,10 @@ import java.util.Scanner;
 
 
 public class Alisveris {
-    List<Integer> sepet = new ArrayList<>();
-    double toplamTutar =0;
+    static List<Integer> sepet = new ArrayList<>();
+    static double toplamTutar =0;
     static boolean uyeGirisi = false;
-    Scanner scan = new Scanner(System.in);
+    static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("feature");
