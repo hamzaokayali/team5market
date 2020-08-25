@@ -132,7 +132,7 @@ public class Alisveris {
     }
     public static void cikis(){
         //sepet kontrolu yapılarak boş ise programdan çıkış yapılır dolu ise kasaya yönlendirilir.
-        System.out.println("hei");
+        System.out.println("hei1");
     }
 
 }
