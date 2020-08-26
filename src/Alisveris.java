@@ -29,12 +29,13 @@ public class Alisveris {
     static List<Integer> sepet = new ArrayList<>();
     static double toplamTutar =0;
     static boolean uyeGirisi = false;
-    static Scanner scan = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("feature");
 
 uyeGirisi();
+        System.out.println("deneme");
 
 
     }
@@ -112,7 +113,7 @@ uyeGirisi();
         //5 ürün kodu  ürün adı   fiyatı
         //6 geri
         //7 kasaya git
-        //8 çıkışdgdv
+        //8 çıkış
 
     }
     public static void sarkuteriGoster(){   //Hafsa Zeynep TEMİZ
@@ -132,9 +133,13 @@ uyeGirisi();
     }
     public static void manavAlis(int secim, double miktar){  //Basri AKBAŞ
         //secim kodu ile alınan ürünün fiyatını miktar ile çarpıp çıakn sonucu "toplamTutar" variablesine eklenecek
+        toplamTutar=secim*miktar;
         //seçim kodu sepet list ine eklenecek
+        sepet.add(secim);
         //"ürününüz sepete eklenmiştir" yazıp
+        System.out.println("Ürününüz sepete eklenmistir");
         //manavGoster() methoduna geri gönderecek
+        manavGoster();
 
     }
     public static void giyimAlis(int secim,int miktar){     //Hasan Hüseyin GÜNEŞ
@@ -210,7 +215,6 @@ uyeGirisi();
         //"ürününüz sepete eklenmiştir" yazıp
         //giyimGoster() methoduna geri gönderecek
 
-        
     }
 
 }
