@@ -112,7 +112,7 @@ uyeGirisi();
         //5 ürün kodu  ürün adı   fiyatı
         //6 geri
         //7 kasaya git
-        //8 çıkış
+        //8 çıkışdgdv
 
     }
     public static void sarkuteriGoster(){   //Hafsa Zeynep TEMİZ
