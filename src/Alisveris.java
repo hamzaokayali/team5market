@@ -190,18 +190,59 @@ uyeGirisi();
         //7 kasaya git
         //8 çıkış
     }
-    public static void temizlikGoster() {   //Sedat Engin
-        //İçecek ürünlerini fiyatları ile birlikte gösteren bir menü oluşturulacak
-        //almak istediği ürün kodunu müşteriden alacak ardından miktar soracak ve bu sayıları "giyimAlis(secim , miktar)"
-        //parametre olarak methoda gönderecek
-        //1 ürün kodu  ürün adı   fiyatı
-        //2 ürün kodu  ürün adı   fiyatı
-        //3 ürün kodu  ürün adı   fiyatı
-        //4 ürün kodu  ürün adı   fiyatı
-        //5 ürün kodu  ürün adı   fiyatı
-        //6 geri
-        //7 kasaya git
-        //8 çıkış
+    public static void temizlikGoster() {
+        System.out.println("Lutfen almak istediginiz Urunun numarasini giriniz.");
+        System.out.println("  Urun Kodu    Urun Adi          Urun Fiyati");
+        System.out.println("1.   50  -  Bulasik Deterjani -    20.00\n"
+                + "2.   51  -  Camasir Deterjani -    30,00\n"
+                + "3.   52  -  Camasir Suyu      -    15,00\n"
+                + "4.   53  -  Sivi Sabun        -    15,00\n"
+                + "5.   54  -  Dezenfektan       -    25,00\n"
+                + "6. Geri\n7. Kasaya Git\n8. Cikis");
+
+        Scanner scan = new Scanner(System.in);
+        int secim = scan.nextInt();
+        switch(secim) {
+            case 1 :
+                System.out.println("Kac adet almak istersiniz.");
+                break;
+            case 2 :
+                System.out.println("Kac adet almak istersiniz.");
+                break;
+            case 3 :
+                System.out.println("Kac adet almak istersiniz.");
+                break;
+            case 4 :
+                System.out.println("Kac adet almak istersiniz.");
+                break;
+            case 5 :
+                System.out.println("Kac adet almak istersiniz.");
+                break;
+            case 6 :
+                temizlikGoster();
+                break;
+            case 7 :
+                kasa();
+            case 8 :
+                cikis();
+            default:
+                System.out.println("Gecerli sayi giriniz.");
+                temizlikGoster();
+        }
+        int miktar = scan.nextInt();
+        System.out.println("geri dönmek icin 6, kasaya gitmek icin 7, cikmak icin 8 yazınız");
+        giyimAlis(secim, miktar);
+        int karar = scan.nextInt();
+        if(karar==6) {
+            temizlikGoster();
+        }if(karar==7) {
+            kasa();
+        }if(karar==8) {
+            cikis();
+        }else {
+            System.out.println("Hatali giris yaptiniz.");
+            temizlikGoster();
+        }
     }
     public static void icecekAlis(int secim,int miktar) {     //Mehmet Yeşil
         //secim kodu ile alınan ürünün fiyatını miktar ile çarpıp çıakn sonucu "toplamTutar" variablesine eklenecek
