@@ -202,21 +202,27 @@ uyeGirisi();
 
         Scanner scan = new Scanner(System.in);
         int secim = scan.nextInt();
+        int urun = 0;
         switch(secim) {
             case 1 :
                 System.out.println("Kac adet almak istersiniz.");
+                urun = 50;
                 break;
             case 2 :
                 System.out.println("Kac adet almak istersiniz.");
+                urun = 51;
                 break;
             case 3 :
                 System.out.println("Kac adet almak istersiniz.");
+                urun = 52;
                 break;
             case 4 :
                 System.out.println("Kac adet almak istersiniz.");
+                urun = 53;
                 break;
             case 5 :
                 System.out.println("Kac adet almak istersiniz.");
+                urun = 54;
                 break;
             case 6 :
                 temizlikGoster();
@@ -230,19 +236,8 @@ uyeGirisi();
                 temizlikGoster();
         }
         int miktar = scan.nextInt();
-        System.out.println("geri dönmek icin 6, kasaya gitmek icin 7, cikmak icin 8 yazınız");
-        giyimAlis(secim, miktar);
-        int karar = scan.nextInt();
-        if(karar==6) {
-            temizlikGoster();
-        }if(karar==7) {
-            kasa();
-        }if(karar==8) {
-            cikis();
-        }else {
-            System.out.println("Hatali giris yaptiniz.");
-            temizlikGoster();
-        }
+        temizlikAlis(urun, miktar);
+
     }
     public static void icecekAlis(int secim,int miktar) {     //Mehmet Yeşil
         //secim kodu ile alınan ürünün fiyatını miktar ile çarpıp çıakn sonucu "toplamTutar" variablesine eklenecek
