@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,7 +35,8 @@ public class Alisveris {
     public static void main(String[] args) {
         System.out.println("feature");
 
-uyeGirisi();
+//1uyeGirisi();
+manavGoster();
 
 
     }
@@ -73,7 +75,9 @@ uyeGirisi();
             System.out.println("Hatali giris yaptiniz. Lutfen tekrar deneyiniz.");
             menu1();//Hatalı giriş için tekrar menu1() yönlendirilecek
         }
+
     }
+
     public static void menu2(){   //Ertuğrul TOKGÖZ
         //Alışveriş yapmak istediği market bölümüne yönlendirebilmek için
         //4 seçenekli menü oluşturulacak
@@ -97,10 +101,78 @@ uyeGirisi();
         //7 kasaya git
         //8 çıkış
 
+        HashMap<Integer,String> manavUrun = new HashMap <> ();
+        manavUrun.put(1, "Elma");
+        manavUrun.put(2, "Armut");
+        manavUrun.put(3, "Domates");
+        manavUrun.put(4, "Biber");
+        manavUrun.put(5, "Karpuz");
 
+        HashMap<String,Double> manavFiyat = new HashMap <> ();
+        manavFiyat.put("Elma",2.00);
+        manavFiyat.put("Armut",4.00);
+        manavFiyat.put("Domates",2.50);
+        manavFiyat.put("Biber",3.50);
+        manavFiyat.put("Karpuz",1.00);
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println(" 1) Ürünleri listele\n 2)Ürün Fiyatlarını listele");
+        int islem = scan.nextInt();
+        if (islem ==1){
+            System.out.println(manavUrun);
+        }else if(islem == 2){
+            System.out.println(manavFiyat);
+        }else{
+            System.out.println("Lütfen geçerli değer giriniz");
+            manavGoster();
+        }
+
+
+        System.out.println("Hangi ürün seçmek istiyorsunuz?");
+        System.out.println(manavUrun);
+        int secim = scan.nextInt();
+        int a = 0;
+        switch (secim){
+            case 1:
+                a=10;
+                break;
+            case 2:
+                a = 11;
+                break;
+            case 3:
+                a = 12;
+                break;
+
+            case 4:
+                a = 13;
+                break;
+            case 5:
+                a = 14;
+                break;
+            case 6:
+                menu2();
+                break;
+
+            case 7:
+                cikis();
+                break;
+            default:
+                System.out.println("Lütfen geçerli menü girişi yapın");
+                manavGoster();
+        }
+
+
+        System.out.println("------------------------------------");
+
+        System.out.println("Kaç kilo almak istiyorsunuz?");
+        double miktar = scan.nextDouble();
+
+        manavAlis(a,miktar);
 
 
     }
+
     public static void giyimGoster(){   //Fidan TANRIVERDİ
         //giyim ürünlerini fiyatları ile birlikte gösteren bir menü oluşturulacak
         //almak istediği ürün kodunu müşteriden alacak ardından miktar soracak ve bu sayıları "giyimAlis(secim , miktar)"
