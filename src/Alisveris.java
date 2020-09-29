@@ -29,11 +29,8 @@ public class Alisveris {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //menu1();
-        StringBuilder stb = new StringBuilder();
-        stb.append("semra");
-        System.out.println(stb.equals(stb.reverse()));                          //true
-        System.out.println(stb.toString().equals(stb.reverse().toString()));    //false
+        menu1();
+        
 
     }
     public static void main (String a){
